@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.bbb": "c"
+    },
+    "makefile.configureOnOpen": false
+}
