@@ -3,3 +3,5 @@
 #define e "[!]"
 
 #define CHECK printf("check\n");
+
+void pToken(Token);

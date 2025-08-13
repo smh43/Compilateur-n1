@@ -2,7 +2,9 @@ CC = g++
 OUT = compil
 TEST = fichiertest.zzz
 
-all:
+all: simpleCompil
+
+simpleCompil:
 	$(CC) compil.cc LIBS/*.cc -o $(OUT)
 	.\$(OUT) $(TEST)
 

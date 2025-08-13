@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <fstream>
 #include <sstream>
+#include <vector>
 
 #include "LIBS\lexer.h"
 #include "LIBS\debug.h"
@@ -10,7 +11,7 @@ using namespace std;
 int main(int argc, char* argv[]){
 
     ifstream f;
-    string file;
+    string fileCont;
 
     if(argc != 2){
         printf("%s Utilisation : compil.exe {fichier}\n",e);
@@ -27,10 +28,10 @@ int main(int argc, char* argv[]){
     {
         stringstream t;
         t << f.rdbuf();
-        file = t.str();
+        fileCont = t.str();
     }
 
-    printf("%s", file.c_str());
+    vector<Token> tokens = lexer(fileCont);
 
     return 0;
 }
