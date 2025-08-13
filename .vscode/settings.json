@@ -1,7 +1,8 @@
 {
     "files.associations": {
         "*.bbb": "c",
-        "sstream": "cpp"
+        "sstream": "cpp",
+        "unordered_map": "cpp"
     },
     "makefile.configureOnOpen": false
 }

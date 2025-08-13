@@ -1,9 +1,10 @@
-#include "debug.h"
-#include "lexer.h"
-
 #include <stdio.h>
 #include <unordered_map>
 #include <string>
+#include <vector>
+
+#include "debug.h"
+#include "lexer.h"
 
 using namespace std;
 
@@ -18,5 +19,5 @@ unordered_map<int, string> tabType = {
 };
 
 void pToken(Token t){
-    printf("{\n\tType: %s\n\tValeur: %s\n}\n", tabType[t.type].c_str(), t.valeur);
+    printf("{\n\tType: %s\n\tValeur: %s\n}\n", tabType[t.type].c_str(), (t.valeur == "" ? "NULL" : t.valeur));
 }

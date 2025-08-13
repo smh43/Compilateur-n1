@@ -29,6 +29,12 @@ int main(int argc, char* argv[]){
         stringstream t;
         t << f.rdbuf();
         fileCont = t.str();
+        f.close();
+    }
+
+    if(fileCont == ""){
+        printf("%s Le fichier {%s} est vide\n",e, argv[1]);
+        return 1;
     }
 
     vector<Token> tokens = lexer(fileCont);

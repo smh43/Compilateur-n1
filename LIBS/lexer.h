@@ -1,3 +1,7 @@
+#pragma once
+
+using namespace std;
+
 enum TYPE{
     INT,  //nombre
     RET,  //return
@@ -10,7 +14,9 @@ enum TYPE{
 
 struct Token{
     TYPE type;
-    string valeur;
+    std::string valeur;
 };
 
 vector<Token> lexer(string);
+
+#define checkNext(a, b) (a.size() > b)
